@@ -41,5 +41,7 @@ end
 
 # tells us who the winner is
 def winner(board)
-
+ if winning_combo = won?(board)
+   board[winning_combo.first]
+ end
 end
