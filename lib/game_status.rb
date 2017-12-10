@@ -27,7 +27,6 @@ end
 # checks if board is full
 def full?(board)
   board.all? { |token| token == "X" || token == "O" }
-  end
 end
 
 # checks if game ends in draw
