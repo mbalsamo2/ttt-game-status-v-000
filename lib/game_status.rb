@@ -31,7 +31,7 @@ end
 
 # checks if game ends in draw
 def draw?(board)
- if won?(board) == false && full?(board) == true
+ if (won?(board) == false || won?(board) == nil) && full?(board) == true
    return true
  end
 end
