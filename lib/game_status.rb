@@ -39,6 +39,9 @@ end
 # checks if game is over
 def over?(board)
  if won?(board) == true || draw?(board) == true
+   true
+ else
+   false
  end
 end
 
