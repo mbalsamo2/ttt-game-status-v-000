@@ -17,7 +17,11 @@ WIN_COMBINATIONS = [
 
 # true/false for win
 def won?(board)
-
+  WIN_COMBINATIONS.each do |combo|
+    if position_taken?(board,index) == combo
+      combo
+    end
+  end
 end
 
 # checks if board is full
