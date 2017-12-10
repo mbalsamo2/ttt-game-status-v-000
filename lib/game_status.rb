@@ -38,11 +38,7 @@ end
 
 # checks if game is over
 def over?(board)
- if won?(board) == true || draw?(board) == true || full?(board) == true
-   true
- else
-   false
- end
+ won?(board) == true || draw?(board) == true || full?(board) == true
 end
 
 # tells us who the winner is
