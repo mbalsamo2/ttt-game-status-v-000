@@ -15,7 +15,7 @@ WIN_COMBINATIONS = [
   [2,4,6] # diagonal R to L
 ]
 
-# true/false for win
+# false for no win/draw, returns winning array
 def won?(board)
   WIN_COMBINATIONS.detect do |combo|
     board[combo[0]] == board[combo[1]] &&
@@ -26,7 +26,11 @@ end
 
 # checks if board is full
 def full?(board)
-
+  full = true
+   full =  position_taken?(board, index).all? do |taken|
+     taken != "" || taken != " "
+   end
+   full
 end
 
 # checks if game ends in draw
