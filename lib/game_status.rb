@@ -26,11 +26,8 @@ end
 
 # checks if board is full
 def full?(board)
-  full = true
-   full =  position_taken?(board, index).all? do |taken|
-     taken != "" || taken != " "
-   end
-   full
+  board.all? { |token| token == "X" || token == "O" }
+  end
 end
 
 # checks if game ends in draw
